@@ -11,8 +11,7 @@
 
 <div class="container">
   <div class="py-5 text-center">
-  <h2>Create</h2>
-  <p class="lead">Post your own article</p>
+  <h2>Edit an existing article</h2>
 </div>
 
 <%= form_for @article, html: {class: "needs-validation"} do |f| %>
@@ -26,7 +25,7 @@
                 <%= f.label :description %><br/>
                 <%= f.text_area :description, :class => "form-control" %>
             </p>
-            <%= f.submit "Create", :class => "btn btn-primary btn-lg btn-block" %>
+            <%= f.submit "Update", :class => "btn btn-primary btn-lg btn-block" %>
         </div>
     </div>
 <% end %>

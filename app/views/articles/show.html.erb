@@ -1,11 +1,17 @@
 <%= render "pages/header" %>
 
-<h1>Your new article</h1>
-<p>
-    Title: <%= @article.title %>
-</p>
-<p>
-    Description: <%= @article.description %>
-</p>
+<main role="main" class="container">      
+    <h1 class="mt-5">
+        Title: <%= @article.title %>
+    </h1>
+    <%= link_to edit_article_path do %>
+        <button type="button" class="btn btn-primary my-2">
+            Edit
+        </button>
+    <% end %>
+    <p class="lead">
+        Description: <%= @article.description %>
+    </p>
+</main>
 
 <%= render "pages/footer" %>

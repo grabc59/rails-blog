@@ -2,7 +2,7 @@
 
 <main role="main" class="container">      
     <h1 class="mt-5">
-        Title: <%= @article.title %>
+        <%= @article.title %>
     </h1>
     <%= link_to edit_article_path do %>
         <button type="button" class="btn btn-primary my-2">
@@ -10,7 +10,7 @@
         </button>
     <% end %>
     <p class="lead">
-        Description: <%= @article.description %>
+        <%= @article.description %>
     </p>
 </main>
 

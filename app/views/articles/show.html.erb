@@ -1,15 +1,16 @@
-<main role="main" class="container">      
-    <h1 class="mt-5">
-        <%= @article.title %>
-    </h1>
-    <%= link_to edit_article_path do %>
-        <button type="button" class="btn btn-primary my-2">
-            Edit
-        </button>
-    <% end %>
-    <p class="lead">
-        <%= @article.description %>
-    </p>
-    <%= link_to "Return to articles", articles_path %>
-
-</main>
+<div class="card mb-3">
+  <%= image_tag(@article.image, :alt => "article image", :class => "card-img-top")%>
+  <div class="card-body">
+    <h1 class="card-title"><%= @article.title %></h1>
+    <hr>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-sm btn-outline-primary" %>
+            <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger" %>
+        </div>
+    </div>
+    <p class="card-text"><%= simple_format(@article.description) %></p>
+    <p class="card-text"><small class="text-muted"><%= time_ago_in_words(@article.created_at) %> ago</small>
+</p>
+  </div>
+</div>

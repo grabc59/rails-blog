@@ -1,19 +1,21 @@
 <div class="card-columns">
     <% @articles.each do |article| %>
-        <div class="card">
-            <%= image_tag(article.image, :alt => "article image", :class => "card-img-top")%>
-            <div class="card-body">
-                <h5 class="card-title"><%= article.title %></h5>
-                <p class="card-text"><%= article.description %></p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <%= link_to "Show", article_path(article), class: "btn btn-sm btn-outline-primary" %>
-                        <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-outline-secondary" %>
-                        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger" %>
+            <div class="card">
+                <%= link_to(article_path(article))  do %>
+                <%= image_tag(article.image, :alt => "article image", :class => "card-img-top")%>
+                <% end %>
+                <div class="card-body">
+                    <h3 class="card-title"><%= article.title %></h3>
+                    <hr>
+                    <p class="card-text"><%= article.description %></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-outline-primary" %>
+                            <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger" %>
+                        </div>
+                        <small class="text-muted"><%= time_ago_in_words(article.created_at) %></small>
                     </div>
-                    <small class="text-muted"><%= time_ago_in_words(article.created_at) %></small>
                 </div>
             </div>
-        </div>
     <% end %>
 </div>

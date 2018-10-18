@@ -19,6 +19,11 @@
       ">
         <%= link_to 'Articles', articles_path, class: "nav-link" %>
       </li>
+      <li class="nav-item
+        <%= 'active' if current_page?(new_article_path) %>
+      ">
+        <%= link_to 'Create', new_article_path, class: "nav-link" %>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Articles" aria-label="Search">

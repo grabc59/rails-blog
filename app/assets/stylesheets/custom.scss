@@ -1,3 +1,12 @@
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+}
+
+body {
+  padding-top: 70px;
+}
+
 .card-img-top {
   width: 100%;
   height: 15vw;
@@ -7,14 +16,12 @@
 .jumbotron {
   background-image: asset-url("alpha-blog-background.png");
   background-size: cover;
-}
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-}
-body {
-  padding-top: 70px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 @import "bootstrap";

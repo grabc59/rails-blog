@@ -10,20 +10,13 @@
                             <p><%= article.title %></p>
                             <p class="card-text"><%= article.description %></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    
                                     <div class="btn-group">
 
-                                        <%= link_to article_path(article) do %>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Show</button>
-                                        <% end %>
+                                        <%= link_to "Show", article_path(article), class: "btn btn-sm btn-outline-secondary" %>
 
-                                        <%= link_to edit_article_path(article) do %>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        <% end %>
+                                        <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-outline-secondary" %>
 
-                                        <%= link_to article_path(article), method: :delete, data: {confirm: "Are you sure?"} do %>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
-                                        <% end %>
+                                        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-secondary" %>
                                     </div>
                                     
                                     <small class="text-muted"><%= time_ago_in_words(article.created_at) %></small>

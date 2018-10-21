@@ -9,20 +9,17 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <%# <li class="nav-item"> %>
-      <li class="nav-item 
-        <%= 'active' if current_page?(about_path) %>
-      ">
+      <li class="nav-item <%= 'active' if current_page?(about_path) %>">
         <%= link_to 'About', about_path, class: "nav-link" %>
       </li>
-      <li class="nav-item
-        <%= 'active' if current_page?(articles_path) %>
-      ">
+      <li class="nav-item <%= 'active' if current_page?(articles_path) %>">
         <%= link_to 'Articles', articles_path, class: "nav-link" %>
       </li>
-      <li class="nav-item
-        <%= 'active' if current_page?(new_article_path) %>
-      ">
+      <li class="nav-item <%= 'active' if current_page?(new_article_path) %>">
         <%= link_to 'Create', new_article_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item <%= 'active' if current_page?(signup_path) %>">
+        <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

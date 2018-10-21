@@ -10,8 +10,8 @@
                     <div class="article-meta-details">
                         <small class="text-muted">
                             By: <%= article.user.username if article.user %>,
-                            <%= time_ago_in_words(article.created_at) %>, 
-                            last updated: <%= time_ago_in_words(article.created_at) %>
+                            <%= time_ago_in_words(article.created_at) %> ago, 
+                            last updated: <%= time_ago_in_words(article.created_at) %> ago
                         </small>
                     </div>
                     <p class="card-text"><%= article.description %></p>

@@ -4,10 +4,10 @@
             <div class="card text-danger border-danger mb-3 col-xs-12">
                 <div class="card-header">Error</div>
                 <div class="card-body">
-                    <h2 class="card-title">
+                    <h3 class="card-title">
                         <%= pluralize(obj.errors.count, "error") %>
                         prevented this item from being saved:
-                    </h2>
+                    </h3>
                     <div class="card-text">
                         <ul>
                             <% obj.errors.full_messages.each do |msg| %>

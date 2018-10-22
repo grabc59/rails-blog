@@ -1,0 +1,11 @@
+<h1 align="center">All Alpha Bloggers</h1>
+
+<% @users.each do |user| %>
+    <div class="card col-4 offset-4 mt-2">
+        <div class="card-body d-flex align-items-center flex-column">
+            <%= link_to gravatar_for(user), user_path(user) %>
+            <%= link_to user.username, user_path(user) %>
+            <small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+        </div>
+    </div>
+<% end %>

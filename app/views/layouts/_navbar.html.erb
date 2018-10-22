@@ -21,6 +21,9 @@
       <li class="nav-item <%= 'active' if current_page?(signup_path) %>">
         <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
       </li>
+      <li class="nav-item <%= 'active' if current_page?(users_path) %>">
+        <%= link_to 'Users', users_path, class: "nav-link" %>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Articles" aria-label="Search">
